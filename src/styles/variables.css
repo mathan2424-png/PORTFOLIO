@@ -1,0 +1,73 @@
+:root {
+  /* Exact Color System per Specification */
+  --bg-canvas: #F5F6FA;
+  --bg-secondary: #EEF1F8;
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --surface-glass-solid: rgba(255, 255, 255, 0.88);
+  --surface-glass-subtle: rgba(255, 255, 255, 0.55);
+  --surface-card: #FFFFFF;
+
+  /* Typography Colors */
+  --text-primary: #10131A;
+  --text-secondary: #626A78;
+  --text-muted: #8A94A6;
+  --text-inverse: #FFFFFF;
+  --text-inverse-muted: #A0AEC0;
+
+  /* Accent & Atmospheric Tints */
+  --accent: #245DDB;
+  --accent-hover: #1A4AB8;
+  --accent-soft-blue: #DCE9FF;
+  --accent-soft-lavender: #E9E5FF;
+  --accent-glow: rgba(36, 93, 219, 0.22);
+  --accent-tint: rgba(36, 93, 219, 0.08);
+
+  /* Status Colors */
+  --status-green: #10B981;
+  --status-green-glow: rgba(16, 185, 129, 0.25);
+
+  /* Translucent & Glass Borders */
+  --border-glass: rgba(20, 30, 60, 0.08);
+  --border-glass-light: rgba(255, 255, 255, 0.85);
+  --border-hover: rgba(36, 93, 219, 0.3);
+  --border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Dark Section Tokens */
+  --bg-dark: #0B0E14;
+  --bg-dark-surface: #121722;
+  --bg-dark-card: #182030;
+
+  /* Typography Stacks */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Radius System per Specification */
+  --radius-section: 32px;
+  --radius-card: 22px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  /* Soft Layered Shadows */
+  --shadow-glass: 0 20px 50px rgba(20, 30, 60, 0.05), 0 4px 14px rgba(20, 30, 60, 0.03);
+  --shadow-glass-hover: 0 30px 70px rgba(20, 30, 60, 0.09), 0 8px 24px rgba(20, 30, 60, 0.04);
+  --shadow-float: 0 16px 36px rgba(20, 30, 60, 0.08);
+  --shadow-sm: 0 2px 8px rgba(20, 30, 60, 0.04);
+
+  /* Layout Containers */
+  --container-max: 1280px;
+  --container-pad: clamp(1.25rem, 4vw, 2.5rem);
+  --section-pad: clamp(4.5rem, 8vw, 7.5rem);
+  --header-height: 76px;
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 420ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-Index */
+  --z-canvas: 0;
+  --z-base: 1;
+  --z-nav: 100;
+  --z-cursor: 999;
+}

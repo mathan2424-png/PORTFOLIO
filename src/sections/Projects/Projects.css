@@ -1,0 +1,28 @@
+.projects-section {
+  position: relative;
+  background-color: var(--bg-subtle);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.projects-section-header {
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.header-meta-group {
+  margin-bottom: 2.5rem;
+}
+
+.showcases-feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-category-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}

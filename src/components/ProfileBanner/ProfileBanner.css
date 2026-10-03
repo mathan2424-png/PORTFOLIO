@@ -1,0 +1,409 @@
+/* ProfileBanner.css - Ultra-Clean Developer Profile Banner with Typewriter Animation */
+
+.profile-banner-card {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px -5px rgba(15, 23, 42, 0.05),
+    0 4px 12px -2px rgba(15, 23, 42, 0.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-banner-card:hover {
+  box-shadow: 
+    0 20px 40px -10px rgba(15, 23, 42, 0.08),
+    0 6px 18px -3px rgba(37, 99, 235, 0.04);
+}
+
+/* Left Content Column */
+.profile-banner-left {
+  flex: 1 1 58%;
+  padding: clamp(2.25rem, 4vw, 3.5rem) clamp(2rem, 3.5vw, 3.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+/* Eyebrow & Status Row */
+.profile-banner-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-banner-eyebrow {
+  display: inline-block;
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.82rem, 1.1vw, 0.92rem);
+  font-weight: 700;
+  color: #2563EB;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.profile-banner-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #1D4ED8;
+  letter-spacing: 0.04em;
+}
+
+.status-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+}
+
+/* Dynamic Typewriter Heading Wrap */
+.profile-banner-heading-wrap {
+  min-height: clamp(3.2rem, 5.5vw, 4.8rem);
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0 1rem 0;
+}
+
+.profile-banner-name {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0F172A;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.typewriter-text {
+  color: #0F172A;
+}
+
+/* Sleek Blinking Typewriter Cursor */
+.typewriter-cursor {
+  display: inline-block;
+  color: #2563EB;
+  font-weight: 300;
+  margin-left: 2px;
+  animation: cursorBlink 0.85s steps(2, start) infinite;
+  user-select: none;
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Tagline / Professional Narrative */
+.profile-banner-tagline {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: clamp(0.98rem, 1.25vw, 1.15rem);
+  font-weight: 450;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 2rem 0;
+  max-width: 580px;
+}
+
+/* 2x2 Contact Grid */
+.profile-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem 2rem;
+  max-width: 620px;
+}
+
+.profile-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-info-link,
+.profile-info-static {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1E293B;
+  text-decoration: none;
+  font-size: clamp(0.92rem, 1.1vw, 1rem);
+  font-weight: 500;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.profile-info-link:hover {
+  color: #2563EB;
+}
+
+.profile-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: #0F172A;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.profile-info-link:hover .profile-icon-box {
+  color: #2563EB;
+  transform: scale(1.08);
+}
+
+.profile-info-text {
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-ext-icon {
+  opacity: 0;
+  color: #2563EB;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.profile-info-link:hover .profile-ext-icon {
+  opacity: 0.8;
+  transform: translate(2px, -2px);
+}
+
+/* Quick Copy Button */
+.profile-copy-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: all 0.15s ease;
+}
+
+.profile-copy-btn:hover {
+  opacity: 1;
+  color: #2563EB;
+  background-color: #F1F5F9;
+}
+
+.copy-success {
+  color: #10B981 !important;
+}
+
+/* Copy Toast */
+.profile-copied-toast {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  animation: toastFadeIn 0.25s ease-out;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Right Portrait Area */
+.profile-banner-right {
+  flex: 0 0 42%;
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  overflow: hidden;
+}
+
+.profile-portrait-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Soft transition vignette blending portrait office backdrop into white canvas */
+.profile-portrait-blend {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  background: linear-gradient(to right, #FFFFFF 0%, rgba(255, 255, 255, 0.85) 35%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.profile-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-banner-card:hover .profile-portrait-img {
+  transform: scale(1.03);
+}
+
+/* Fallback card if photo is unavailable */
+.profile-portrait-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.portrait-fallback-initials {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #2563EB;
+  color: #FFFFFF;
+  font-family: var(--font-display, sans-serif);
+  font-size: 2.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.portrait-fallback-role {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1E293B;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Accessible Screen Reader Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .profile-banner-left {
+    padding: 2.5rem;
+  }
+  .profile-banner-grid {
+    gap: 1rem 1.75rem;
+  }
+  .profile-banner-right {
+    flex: 0 0 38%;
+  }
+}
+
+@media (max-width: 860px) {
+  .profile-banner-card {
+    flex-direction: column-reverse;
+  }
+
+  .profile-banner-right {
+    flex: 0 0 auto;
+    height: 320px;
+    min-height: auto;
+  }
+
+  .profile-portrait-blend {
+    width: 100%;
+    height: 90px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0.85) 40%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .profile-portrait-img {
+    object-position: center 25%;
+  }
+
+  .profile-banner-left {
+    padding: 2rem 1.75rem 2.5rem 1.75rem;
+  }
+
+  .profile-banner-heading-wrap {
+    min-height: 3.5rem;
+  }
+
+  .profile-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .profile-copied-toast {
+    left: 1.75rem;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-banner-right {
+    height: 260px;
+  }
+  .profile-banner-heading-wrap {
+    min-height: 4rem;
+  }
+  .profile-banner-name {
+    font-size: 2.1rem;
+  }
+  .profile-banner-tagline {
+    font-size: 0.95rem;
+  }
+}

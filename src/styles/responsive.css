@@ -1,0 +1,76 @@
+/* Responsive Breakpoints & Device Adaptations */
+
+/* Ultra-Wide Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1320px;
+    --section-pad: 8.5rem;
+  }
+}
+
+/* Standard Desktop / Laptops (1024px to 1439px) */
+@media (max-width: 1200px) {
+  :root {
+    --container-pad: 2rem;
+  }
+}
+
+/* Tablet (768px to 1023px) */
+@media (max-width: 1024px) {
+  :root {
+    --section-pad: 5.5rem;
+    --container-pad: 1.75rem;
+  }
+}
+
+/* Mobile & Small Tablets (Under 768px) */
+@media (max-width: 768px) {
+  :root {
+    --section-pad: 4rem;
+    --header-height: 64px;
+    --container-pad: 1.25rem;
+  }
+
+  body {
+    font-size: 0.98rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Prevent any accidental overflow */
+  .container {
+    overflow-x: hidden;
+  }
+}
+
+/* Compact Mobile (320px to 430px) */
+@media (max-width: 480px) {
+  :root {
+    --container-pad: 1rem;
+    --section-pad: 3.5rem;
+  }
+
+  .eyebrow-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .section-title-huge {
+    font-size: 2.2rem;
+    line-height: 1.05;
+  }
+}
+
+/* Smallest phone screens (320px) */
+@media (max-width: 340px) {
+  :root {
+    --container-pad: 0.75rem;
+  }
+
+  .section-title-huge {
+    font-size: 1.95rem;
+  }
+}

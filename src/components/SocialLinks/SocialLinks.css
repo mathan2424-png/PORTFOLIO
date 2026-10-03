@@ -1,0 +1,76 @@
+.social-links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.social-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-link-item:hover .social-icon-wrapper {
+  background-color: var(--text-primary);
+  color: var(--text-inverse);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.social-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.social-link-item:hover .social-label {
+  color: var(--text-primary);
+}
+
+/* Variant Subtle */
+.social-subtle .social-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border-color: var(--border-subtle);
+}
+
+/* Variant Dark for dark contrasting section */
+.social-dark .social-icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-dark);
+  color: var(--text-inverse);
+}
+
+.social-dark .social-link-item:hover .social-icon-wrapper {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #FFFFFF;
+}
+
+.social-dark .social-label {
+  color: var(--text-inverse-muted);
+}
+
+.social-dark .social-link-item:hover .social-label {
+  color: var(--text-inverse);
+}

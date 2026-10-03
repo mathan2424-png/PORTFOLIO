@@ -1,0 +1,215 @@
+.more-work-section {
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.more-work-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.more-work-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.more-work-header-desc {
+  max-width: 480px;
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Rows Container */
+.more-work-rows-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-light);
+}
+
+.more-work-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  outline: none;
+}
+
+.more-work-row:hover,
+.more-work-row.is-active {
+  background-color: var(--bg-primary);
+  border-bottom-color: var(--accent);
+}
+
+.row-main-bar {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 60px;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+  gap: 1.5rem;
+}
+
+.row-ident {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.row-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.row-project-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.more-work-row:hover .row-project-name {
+  color: var(--accent);
+}
+
+.row-type-label {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.row-tech-col {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.row-tech-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+}
+
+.row-action-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row-arrow-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.more-work-row:hover .row-arrow-circle {
+  background-color: var(--accent);
+  color: var(--text-inverse);
+  border-color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.row-arrow {
+  transition: transform var(--transition-fast);
+}
+
+/* Expandable Drawer */
+.row-drawer-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease;
+}
+
+.more-work-row.is-active .row-drawer-content {
+  max-height: 140px;
+  opacity: 1;
+}
+
+.drawer-inner {
+  padding: 0 0.5rem 1.5rem 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.row-description {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.55;
+}
+
+.row-drawer-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row-category-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--accent-subtle);
+  color: var(--accent);
+  border-radius: var(--radius-full);
+}
+
+.row-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color var(--transition-fast);
+}
+
+.row-link:hover {
+  color: var(--accent-hover);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .row-main-bar {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+
+  .row-type-col,
+  .row-tech-col {
+    display: none;
+  }
+
+  .drawer-inner {
+    padding: 0 0.5rem 1.25rem 0.5rem;
+  }
+}

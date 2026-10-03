@@ -1,0 +1,89 @@
+.custom-cursor-dot {
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transition: opacity 0.2s ease, transform 0.05s ease-out;
+  will-change: transform;
+}
+
+.custom-cursor-dot.click,
+.custom-cursor-dot.view {
+  opacity: 0;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent);
+  background-color: rgba(36, 93, 219, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: calc(var(--z-cursor) - 1);
+  transition: width 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              top 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              left 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              border-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.custom-cursor-ring.click {
+  top: -26px;
+  left: -26px;
+  width: 52px;
+  height: 52px;
+  border-color: var(--accent);
+  background-color: var(--accent);
+  box-shadow: 0 8px 22px rgba(36, 93, 219, 0.28);
+}
+
+.custom-cursor-ring.click .cursor-label {
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.custom-cursor-ring.view {
+  top: -36px;
+  left: -36px;
+  width: 72px;
+  height: 72px;
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+  box-shadow: 0 14px 34px rgba(16, 19, 26, 0.22);
+}
+
+.cursor-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  animation: cursorLabelFadeIn 0.2s ease forwards;
+}
+
+@keyframes cursorLabelFadeIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (pointer: coarse), (max-width: 1024px) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
