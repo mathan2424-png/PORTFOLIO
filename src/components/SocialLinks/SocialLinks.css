@@ -21,19 +21,21 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  background-color: var(--bg-white);
-  border: 1px solid var(--border-light);
+  background: linear-gradient(135deg, rgb(255 255 255 / 45%) 0%, rgb(246 249 255 / 80%) 100%);
+  border: 1.5px solid rgb(6 6 6 / 18%);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  box-shadow: inset 0 1px 1px 0 #fff, var(--shadow-sm);
   color: var(--text-primary);
   transition: all var(--transition-fast);
-  box-shadow: var(--shadow-sm);
 }
 
 .social-link-item:hover .social-icon-wrapper {
-  background-color: var(--text-primary);
-  color: var(--text-inverse);
+  background: var(--text-primary);
+  color: #FFFFFF;
   border-color: var(--text-primary);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.25);
 }
 
 .social-label {

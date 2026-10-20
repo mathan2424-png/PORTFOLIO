@@ -1,6 +1,6 @@
 .experience-section {
   position: relative;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid rgb(6 6 6 / 10%);
 }
 
 .experience-container {

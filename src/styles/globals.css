@@ -29,13 +29,38 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Atmospheric Ambient Canvas Layer (Soft Lavender & Blue Light) */
+/* Atmospheric Ambient Canvas Layer (Apple VisionOS Fluid Glass Texture) */
 .atmospheric-canvas-bg {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: var(--z-canvas);
   overflow: hidden;
+  background-color: #0A0D18;
+}
+
+/* High-Resolution Fluid 3D Glass Wallpaper */
+.canvas-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('/portfolio_glass_bg.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  filter: saturate(125%) brightness(100%);
+  transform: scale(1.02);
+  will-change: transform;
+}
+
+/* Luxury Prismatic Refraction & Vignette Overlay */
+.canvas-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 12%, rgba(245, 247, 255, 0.32) 0%, rgba(238, 244, 255, 0.52) 45%, rgba(226, 235, 255, 0.72) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(240, 245, 255, 0.48) 50%, rgba(232, 238, 255, 0.65) 100%);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
 }
 
 .canvas-blob {
@@ -147,17 +172,21 @@ code, pre {
   z-index: var(--z-base);
 }
 
-/* Large Rounded Glass Section Container */
+/* Large Rounded Glass Section Container - Apple VisionOS Frosted Luxury Glass */
 .glass-section-container {
-  background-color: var(--surface-glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-glass-light);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(245, 248, 255, 0.7) 50%, rgba(255, 255, 255, 0.88) 100%);
+  backdrop-filter: blur(36px) saturate(210%);
+  -webkit-backdrop-filter: blur(36px) saturate(210%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
   border-radius: var(--radius-section);
-  box-shadow: var(--shadow-glass);
+  box-shadow: 
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
+    0 22px 55px -10px rgba(15, 23, 42, 0.08),
+    0 0 35px -5px rgba(37, 99, 235, 0.1);
   padding: clamp(2.5rem, 5vw, 4.5rem);
   position: relative;
   overflow: hidden;
+  transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
 /* Eyebrow System */

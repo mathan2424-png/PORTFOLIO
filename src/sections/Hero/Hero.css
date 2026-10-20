@@ -27,13 +27,13 @@
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  background-color: var(--surface-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-glass-light);
+  background: linear-gradient(135deg, rgb(255 255 255 / 45%) 0%, rgb(246 249 255 / 75%) 100%);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1.5px solid rgb(6 6 6 / 18%);
   padding: 0.45rem 1rem;
   border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-sm);
+  box-shadow: inset 0 1px 1.5px 0 #fff, var(--shadow-sm);
   width: fit-content;
   margin-bottom: 1.75rem;
 }
@@ -143,23 +143,23 @@
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 600;
-  padding: 0.3rem 0.75rem;
-  background-color: var(--surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-glass);
+  padding: 0.35rem 0.8rem;
+  background: linear-gradient(135deg, rgb(255 255 255 / 35%) 0%, rgb(246 249 255 / 70%) 100%);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border: 1.5px solid rgb(6 6 6 / 18%);
   border-radius: var(--radius-pill);
   color: var(--text-primary);
-  box-shadow: 0 1px 4px rgba(20, 30, 60, 0.03);
+  box-shadow: inset 0 1px 1px 0 #fff;
   transition: all var(--transition-fast);
 }
 
 .tech-badge:hover {
-  background-color: #FFFFFF;
+  background: linear-gradient(135deg, rgb(255 255 255 / 65%) 0%, rgb(246 249 255 / 90%) 100%);
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: inset 0 1px 1px 0 #fff, 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
 .badge-dot {
@@ -334,12 +334,12 @@
 /* Floating Layered Mini UI Panels */
 .hero-floating-card {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-glass-light);
+  background: linear-gradient(135deg, rgb(255 255 255 / 45%) 0%, rgb(246 249 255 / 80%) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1.5px solid rgb(6 6 6 / 20%);
   border-radius: var(--radius-card);
-  box-shadow: var(--shadow-float);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.12), inset 0 1.5px 2px 0 #fff;
   z-index: 3;
   pointer-events: none;
   transition: transform 0.15s ease-out;
@@ -384,7 +384,8 @@
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--text-secondary);
-  background-color: var(--bg-canvas);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgb(6 6 6 / 10%);
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-sm);
 }
@@ -420,7 +421,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.65rem;
-  background-color: var(--bg-canvas);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgb(6 6 6 / 10%);
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-sm);
 }

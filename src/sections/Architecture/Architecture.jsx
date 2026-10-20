@@ -4,7 +4,7 @@ import ArchitectureNode from '../../components/ArchitectureNode/ArchitectureNode
 import './Architecture.css';
 
 export default function Architecture() {
-  const [activeStepIndex, setActiveStepIndex] = useState(1); // default to React Frontend
+  const [activeStepIndex,  setActiveStepIndex] = useState(1); // default to React Frontend
   const activeNode = architectureFlow[activeStepIndex];
 
   return (
@@ -47,7 +47,7 @@ export default function Architecture() {
                 <h3 className="inspector-name">{activeNode.tech}</h3>
                 <span className="inspector-role-pill">{activeNode.role}</span>
               </div>
-              <div className="inspector-live-tag">
+              <div className="inspector-live-c  adx   ">
                 <span className="pulse-green-dot" />
                 <span>Tier Active</span>
               </div>

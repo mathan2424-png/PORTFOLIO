@@ -1,5 +1,4 @@
 import React from 'react';
-import CustomCursor from './components/CustomCursor/CustomCursor';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './sections/Hero/Hero';
 import About from './sections/About/About';
@@ -22,16 +21,16 @@ export default function App() {
 
   return (
     <div className="portfolio-app">
-      {/* Atmospheric Ambient Canvas Layer (Soft Lavender/Blue light blobs + subtle grid) */}
+      {/* Atmospheric Ambient Canvas Layer (Fluid 3D Glass Wallpaper + Refraction Overlay) */}
       <div className="atmospheric-canvas-bg" aria-hidden="true">
+        <div className="canvas-bg-image" />
+        <div className="canvas-bg-overlay" />
         <div className="canvas-blob canvas-blob-1" />
         <div className="canvas-blob canvas-blob-2" />
         <div className="canvas-blob canvas-blob-3" />
         <div className="canvas-grid-overlay" />
       </div>
 
-      {/* Desktop-only Custom Cursor (Dot + VIEW / CLICK pill) */}
-      <CustomCursor />
 
       {/* Top Reading Progress Bar */}
       <div

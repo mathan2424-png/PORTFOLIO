@@ -17,7 +17,7 @@ export const featuredProjects = [
     id: 'serviq',
     number: '01',
     title: 'Serviq',
-    categoryTag: 'SaaS / MERN / Admin Platform',
+    categoryTag: 'SaaS /MERN / Admin Platform',
     categories: ['MERN', 'React', 'Admin Platforms'],
     subtitle: 'Multi-Restaurant SaaS QR Ordering & Centralized Operations Platform',
     summary: 'A multi-restaurant SaaS platform designed around QR ordering and centralized restaurant administration.',

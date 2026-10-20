@@ -27,7 +27,7 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* Premium Horizontal Technology Strip */}
+          Premium Horizontal Technology Strip
           <div className="tech-strip-wrapper">
             <div className="tech-strip-header">
               <span className="tech-strip-title">TECHNOLOGY STRIP</span>
