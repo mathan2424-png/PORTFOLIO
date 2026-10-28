@@ -1,0 +1,82 @@
+/* MacGreeting.css - Buttery Smooth 60FPS Apple "Hello" Single-Stroke Experience */
+
+.mac-greeting-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* High-performance pure gradient background without heavy GPU filter thrashing */
+  background: radial-gradient(
+    circle at 50% 50%,
+    #FFFFFF 0%,
+    #F6F8FE 50%,
+    #EDF2FC 100%
+  );
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* macOS Desktop Unlock Zoom Dissolve (Lightweight, pure compositor thread) */
+.mac-greeting-backdrop.is-dismissing {
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+/* Pure Center Stage (No Bars, No Extra Text, No Icons) */
+.mac-pure-hello-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(740px, 86vw);
+  max-width: 860px;
+  margin: auto;
+  pointer-events: none;
+}
+
+.mac-apple-hello-svg {
+  width: 100%;
+  height: auto;
+  max-height: 46vh;
+  overflow: visible;
+  filter: drop-shadow(0 6px 18px rgba(37, 99, 235, 0.16));
+  transform: translateZ(0);
+}
+
+/* Single Unbroken Apple Hello Stroke Animation */
+.apple-hello-unbroken-stroke {
+  fill: none;
+  will-change: stroke-dashoffset;
+  /* Hardware acceleration */
+  transform: translateZ(0);
+}
+
+/* Smooth continuous drawing from start to finish without pauses or glitches */
+.apple-hello-unbroken-stroke.animate-draw {
+  animation: appleDrawSingleStroke 2.2s cubic-bezier(0.42, 0, 0.25, 1) forwards;
+}
+
+@keyframes appleDrawSingleStroke {
+  0% {
+    stroke-dashoffset: var(--hello-path-length, 10500);
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .mac-greeting-backdrop,
+  .apple-hello-unbroken-stroke {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    transition: opacity 0.1s ease !important;
+  }
+}

@@ -13,6 +13,7 @@ import CodeSection from './sections/Code/Code';
 import Capabilities from './sections/Capabilities/Capabilities';
 import Contact from './sections/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import MacGreeting from './components/MacGreeting/MacGreeting';
 import { useScrollProgress } from './hooks/useScrollProgress';
 import './App.css';
 
@@ -21,6 +22,9 @@ export default function App() {
 
   return (
     <div className="portfolio-app">
+      {/* Apple Mac-Style Luxury Startup Greeting Splash */}
+      <MacGreeting />
+
       {/* Atmospheric Ambient Canvas Layer (Fluid 3D Glass Wallpaper + Refraction Overlay) */}
       <div className="atmospheric-canvas-bg" aria-hidden="true">
         <div className="canvas-bg-image" />
@@ -48,10 +52,10 @@ export default function App() {
 
       {/* Main Art-Directed Content Flow */}
       <main id="main-content">
-        {/* 1. Hero Section */}
+        {/* Hero Section matching reference image */}
         <Hero />
 
-        {/* 2. About Section */}
+        {/* 1. About / Profile Section */}
         <About />
 
         {/* 4. What I Build (4 Layered Product Blocks) */}

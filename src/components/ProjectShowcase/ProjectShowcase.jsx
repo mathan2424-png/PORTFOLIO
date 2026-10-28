@@ -26,7 +26,7 @@ export default function ProjectShowcase({ project, index }) {
   const isEven = index % 2 === 1;
 
   return (
-    <article 
+    <article
       className={`project-showcase-item layout-${layoutStyle} theme-${theme} ${isEven ? 'is-reversed' : ''}`}
       id={`project-${id}`}
     >
@@ -134,8 +134,8 @@ export default function ProjectShowcase({ project, index }) {
 
         {/* Browser Visual Showcase (Occupies majority of viewport) */}
         <div className="showcase-visual-wrapper">
-          <div 
-            className="browser-mockup-frame" 
+          <div
+            className="browser-mockup-frame"
             data-cursor="view"
             role="figure"
             aria-label={`${title} application preview`}
@@ -166,9 +166,9 @@ export default function ProjectShowcase({ project, index }) {
 
             {/* High-Resolution Screenshot Image with Hover Zoom */}
             <div className="browser-viewport-screen">
-              <img 
-                src={image} 
-                alt={imageAlt} 
+              <img
+                src={image}
+                alt={imageAlt}
                 className="showcase-screen-img"
                 loading="lazy"
               />

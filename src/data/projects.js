@@ -2,6 +2,8 @@ import serviqImg from '../assets/images/serviq.jpg';
 import networthImg from '../assets/images/networth.jpg';
 import pricoutureImg from '../assets/images/pricouture.jpg';
 import propertyGuardianImg from '../assets/images/propertyguardian.jpg';
+import tinyTheatreImg from '../assets/images/tiny_theatre.jpg';
+import hrPortalImg from '../assets/images/hr_portal.jpg';
 
 export const projectCategories = [
   'All',
@@ -17,10 +19,10 @@ export const featuredProjects = [
     id: 'serviq',
     number: '01',
     title: 'Serviq',
-    categoryTag: 'SaaS /MERN / Admin Platform',
+    categoryTag: 'SaaS / MERN / Admin Platform',
     categories: ['MERN', 'React', 'Admin Platforms'],
     subtitle: 'Multi-Restaurant SaaS QR Ordering & Centralized Operations Platform',
-    summary: 'A multi-restaurant SaaS platform designed around QR ordering and centralized restaurant administration.',
+    summary: 'A multi-restaurant SaaS platform designed around QR ordering, live order queuing, and centralized corporate restaurant administration.',
     image: serviqImg,
     imageAlt: 'Serviq Multi-Restaurant SaaS Operations and Order Management Platform',
     layoutStyle: 'flagship-split',
@@ -28,15 +30,12 @@ export const featuredProjects = [
     features: [
       'Super Admin',
       'Restaurants',
-      'Plans',
-      'Subscriptions',
-      'Billing',
+      'Plans & Subscriptions',
+      'Billing Management',
       'Leads / CRM',
       'Support Tickets',
-      'Notifications',
-      'Reports',
-      'Settings',
-      'Role & Permission concepts'
+      'Live Order Queue',
+      'Role & Permission (RBAC)'
     ],
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
     details: {
@@ -44,12 +43,41 @@ export const featuredProjects = [
       engineeringSolution: 'Architected a multi-tenant administrative system in React and Node/Express with MongoDB schema design, JWT authentication, and structured role-based access for Super Admins and Branch Managers.'
     },
     liveUrl: '#',
-    codeUrl: 'https://github.com/mathankumar2467',
+    codeUrl: 'https://github.com/mathan2424-png/PORTFOLIO',
     isPrimary: true
   },
   {
-    id: 'networth-admin',
+    id: 'the-property-guardian',
     number: '02',
+    title: 'The Property Guardian',
+    categoryTag: 'Premium Property Care Experience',
+    categories: ['Business Websites', 'React'],
+    subtitle: 'High-Trust Property Concierge & Remote Asset Verification Platform',
+    summary: 'A premium web experience designed for property owners who need reliable property monitoring and care while away. Features an editorial UI with strong typography and business-oriented layout.',
+    image: propertyGuardianImg,
+    imageAlt: 'The Property Guardian High-Value Real Estate Care and Remote Inspection Interface',
+    layoutStyle: 'architectural-editorial',
+    theme: 'architectural',
+    features: [
+      'Premium Frontend',
+      'Responsive Architecture',
+      'Editorial Typography',
+      'Business-Focused UX',
+      'NRI Property-Care Pathway',
+      'Audit Verification Tiers'
+    ],
+    technologies: ['React', 'Modern CSS', 'JavaScript', 'Responsive Architecture'],
+    details: {
+      clientNeed: 'Non-resident Indian (NRI) property owners need trustworthy, real-time visibility into the security, upkeep, and physical status of their overseas residential investments.',
+      engineeringSolution: 'Developed an authoritative, conversion-driven editorial experience featuring service tiers, scheduled audit breakdowns, and an intuitive client contact pathway.'
+    },
+    liveUrl: 'https://the-property-guardian.netlify.app/',
+    codeUrl: 'https://github.com/mathan2424-png',
+    isPrimary: false
+  },
+  {
+    id: 'networth-admin',
+    number: '03',
     title: 'Networth Admin',
     categoryTag: 'Business Administration Platform',
     categories: ['Admin Platforms', 'MERN', 'React'],
@@ -61,14 +89,12 @@ export const featuredProjects = [
     theme: 'dark-accent',
     features: [
       'Authentication',
-      'Members',
-      'Admins',
-      'Roles',
-      'Plans',
-      'Events',
-      'Posts',
-      'Reports',
-      'Contact management'
+      'Member Directory',
+      'Admin Hierarchy',
+      'Role Matrix (RBAC)',
+      'Plans & Subscriptions',
+      'Events & Announcements',
+      'Security Audit Logs'
     ],
     technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
     details: {
@@ -76,14 +102,72 @@ export const featuredProjects = [
       engineeringSolution: 'Engineered an administrative dashboard with fine-grained RBAC matrix, protected API endpoints, responsive CRUD panels, and audit log interfaces.'
     },
     liveUrl: '#',
-    codeUrl: 'https://github.com/mathankumar2467',
+    codeUrl: 'https://github.com/MathanKumarMP/Networth-Admin',
+    isPrimary: false
+  },
+  {
+    id: 'tiny-theatre',
+    number: '04',
+    title: 'The Tiny Theatre',
+    categoryTag: 'Entertainment & Ticketing Admin',
+    categories: ['Admin Platforms', 'React', 'MERN'],
+    subtitle: 'Interactive Entertainment & Showtime Booking Administration Console',
+    summary: 'A dedicated administrative management portal engineered for movie schedules, real-time seat reservation matrices, ticket verification, and daily revenue tracking.',
+    image: tinyTheatreImg,
+    imageAlt: 'The Tiny Theatre Admin Console with Showtime Management and Seat Matrix',
+    layoutStyle: 'admin-console',
+    theme: 'dark-accent',
+    features: [
+      'Showtime Curation',
+      'Seat Selection Matrix',
+      'Ticket Booking Queue',
+      'Daily Revenue Metrics',
+      'Role-Based Admin Access',
+      'Report Generation'
+    ],
+    technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
+    details: {
+      clientNeed: 'Independent theatres require a streamlined console to configure auditorium seating maps, track ticket allocations, and audit showtime box office earnings in real-time.',
+      engineeringSolution: 'Built a responsive admin interface with seat grid state rendering, booking status pipelines, and secure API endpoints for showtime curation.'
+    },
+    liveUrl: '#',
+    codeUrl: 'https://github.com/MathanKumarMP/TINY-Admin',
+    isPrimary: false
+  },
+  {
+    id: 'hr-portal',
+    number: '05',
+    title: 'HR Portal (HRMS)',
+    categoryTag: 'Enterprise Operations Platform',
+    categories: ['Admin Platforms', 'MERN', 'React'],
+    subtitle: 'Enterprise Human Resource & Department Administration Platform',
+    summary: 'An enterprise-grade HRMS dashboard built to manage multi-department employee directories, attendance records, role allocations, and organizational policy workflows.',
+    image: hrPortalImg,
+    imageAlt: 'Enterprise HRMS Admin Portal Dashboard with Employee Directory and Department Overview',
+    layoutStyle: 'flagship-split',
+    theme: 'light',
+    features: [
+      'Department Management',
+      'Employee Directory',
+      'Role & Permissions (RBAC)',
+      'Staff Attendance Analytics',
+      'Payroll Overview',
+      'Profile Form Verification'
+    ],
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
+    details: {
+      clientNeed: 'Growing businesses require centralized employee records, verified input workflows, and departmental hierarchy oversight without siloed spreadsheets.',
+      engineeringSolution: 'Designed a modular admin dashboard in React with Node/Express REST controllers, strict schema validations, and role-based access control.'
+    },
+    liveUrl: '#',
+    codeUrl: 'https://github.com/mathan2424-png',
     isPrimary: false
   },
   {
     id: 'pricouture',
-    number: '03',
+    number: '06',
     title: 'PRI COUTURE',
-    categoryTag: 'Premium Boutique Ecommerce Experience',
+    categoryTag: 'Premium Boutique Ecommerce',
     categories: ['Ecommerce', 'React'],
     subtitle: 'Editorial Luxury Boutique Storefront & Catalog Management Flow',
     summary: 'A product-focused ecommerce interface delivering an editorial luxury aesthetic. Combines responsive React UI with an API-ready architecture and dynamic catalog administration.',
@@ -92,12 +176,12 @@ export const featuredProjects = [
     layoutStyle: 'luxury-ecommerce',
     theme: 'editorial-warm',
     features: [
-      'React',
-      'Vite',
-      'JavaScript',
-      'Responsive UI',
-      'Product-focused interface',
-      'Admin + website architecture'
+      'React & Vite Tooling',
+      'Responsive Lookbook UI',
+      'Product-Focused Grid',
+      'Cart Drawer State',
+      'Catalog Schema Design',
+      'Admin + Store Architecture'
     ],
     technologies: ['React', 'Vite', 'JavaScript', 'CSS3', 'REST API Architecture'],
     details: {
@@ -105,35 +189,7 @@ export const featuredProjects = [
       engineeringSolution: 'Built a modular React frontend leveraging Vite for lightning-fast loads, fluid image grids, interactive cart drawer state, and an intuitive product catalog schema.'
     },
     liveUrl: '#',
-    codeUrl: 'https://github.com/mathankumar2467',
-    isPrimary: false
-  },
-  {
-    id: 'the-property-guardian',
-    number: '04',
-    title: 'The Property Guardian',
-    categoryTag: 'Premium Property Care Experience',
-    categories: ['Business Websites', 'React'],
-    subtitle: 'High-Trust Property Concierge & Remote Asset Verification Platform',
-    summary: 'A premium web experience designed for property owners who need reliable property monitoring and care while being away. Features an editorial UI with strong typography and business-oriented layout.',
-    image: propertyGuardianImg,
-    imageAlt: 'The Property Guardian High-Value Real Estate Care and Remote Inspection Interface',
-    layoutStyle: 'architectural-editorial',
-    theme: 'architectural',
-    features: [
-      'Premium frontend',
-      'Responsive design',
-      'Editorial typography',
-      'Business-focused UX',
-      'NRI property-care communication'
-    ],
-    technologies: ['React', 'Modern CSS', 'JavaScript', 'Responsive Architecture'],
-    details: {
-      clientNeed: 'Non-resident Indian (NRI) property owners need trustworthy, real-time visibility into the security, upkeep, and physical status of their overseas residential investments.',
-      engineeringSolution: 'Developed an authoritative, conversion-driven editorial experience featuring service tiers, scheduled audit breakdowns, and an intuitive client contact pathway.'
-    },
-    liveUrl: 'https://the-property-guardian.netlify.app/',
-    codeUrl: 'https://github.com/mathankumar2467',
+    codeUrl: 'https://github.com/mathan2424-png',
     isPrimary: false
   }
 ];
@@ -141,7 +197,7 @@ export const featuredProjects = [
 export const additionalProjects = [
   {
     id: 'antb',
-    number: '05',
+    number: '07',
     title: 'ANTB',
     type: 'Corporate Business Web Platform',
     category: 'Business Websites',
@@ -151,7 +207,7 @@ export const additionalProjects = [
   },
   {
     id: 'india-dairy-show',
-    number: '06',
+    number: '08',
     title: 'India Dairy Show',
     type: 'Exhibition & Event Portal',
     category: 'Business Websites',
@@ -161,7 +217,7 @@ export const additionalProjects = [
   },
   {
     id: 'proultima',
-    number: '07',
+    number: '09',
     title: 'Proultima Engineering',
     type: 'Industrial & Engineering Solutions',
     category: 'Business Websites',
@@ -171,7 +227,7 @@ export const additionalProjects = [
   },
   {
     id: 'shrikrish-housing',
-    number: '08',
+    number: '10',
     title: 'Shrikrish Housing',
     type: 'Real Estate & Property Platform',
     category: 'Business Websites',
@@ -181,7 +237,7 @@ export const additionalProjects = [
   },
   {
     id: 'zirve-krishna',
-    number: '09',
+    number: '11',
     title: 'Zirve / Krishna Group',
     type: 'Enterprise Corporate Presence',
     category: 'Business Websites',

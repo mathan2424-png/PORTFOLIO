@@ -2,7 +2,9 @@
 @import './variables.css';
 
 /* Box Sizing & Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,17 +31,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Atmospheric Ambient Canvas Layer (Apple VisionOS Fluid Glass Texture) */
+/* Atmospheric Ambient Canvas Layer (Luminous Frosted Glass Texture) */
 .atmospheric-canvas-bg {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: var(--z-canvas);
   overflow: hidden;
-  background-color: #0A0D18;
+  background-color: #F8FAFC;
 }
 
-/* High-Resolution Fluid 3D Glass Wallpaper */
+/* High-Resolution Fluid 3D Glass Wallpaper Accent */
 .canvas-bg-image {
   position: absolute;
   inset: 0;
@@ -56,7 +58,7 @@ body {
 .canvas-bg-overlay {
   position: absolute;
   inset: 0;
-  background: 
+  background:
     radial-gradient(ellipse at 50% 12%, rgba(245, 247, 255, 0.32) 0%, rgba(238, 244, 255, 0.52) 45%, rgba(226, 235, 255, 0.72) 100%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(240, 245, 255, 0.48) 50%, rgba(232, 238, 255, 0.65) 100%);
   backdrop-filter: blur(1.5px);
@@ -99,7 +101,7 @@ body {
 .canvas-grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(20, 30, 60, 0.02) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(20, 30, 60, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -120,7 +122,12 @@ body {
 }
 
 /* Typography Base */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   color: var(--text-primary);
   font-weight: 700;
@@ -148,7 +155,8 @@ button {
   outline: none;
 }
 
-code, pre {
+code,
+pre {
   font-family: var(--font-mono);
 }
 
@@ -179,7 +187,7 @@ code, pre {
   -webkit-backdrop-filter: blur(36px) saturate(210%);
   border: 1.5px solid rgba(255, 255, 255, 0.95);
   border-radius: var(--radius-section);
-  box-shadow: 
+  box-shadow:
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
     0 22px 55px -10px rgba(15, 23, 42, 0.08),
     0 0 35px -5px rgba(37, 99, 235, 0.1);
@@ -244,9 +252,25 @@ code, pre {
   html {
     scroll-behavior: auto;
   }
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
