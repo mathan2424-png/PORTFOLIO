@@ -65,6 +65,7 @@ export default function MoreWork() {
                     <p className="row-description">{project.description}</p>
                     <div className="row-drawer-actions">
                       <span className="row-category-pill">{project.category}</span>
+                      {project.role && <span className="row-role-pill">{project.role}</span>}
                       <a
                         href={project.link !== '#' ? project.link : '#contact'}
                         className="row-link"

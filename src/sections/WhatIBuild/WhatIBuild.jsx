@@ -14,7 +14,7 @@ const iconMap = {
 export default function WhatIBuild() {
   return (
     <section id="what-i-build" className="section what-i-build-section">
-      <div className="container">
+      <div className="container what-i-build-container">
         {/* Section Header */}
         <div className="section-header">
           <span className="eyebrow-badge">PRODUCT SPECIALIZATIONS</span>

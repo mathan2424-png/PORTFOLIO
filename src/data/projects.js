@@ -7,11 +7,11 @@ import hrPortalImg from '../assets/images/hr_portal.jpg';
 
 export const projectCategories = [
   'All',
-  'MERN',
   'React',
   'Admin Platforms',
   'Business Websites',
-  'Ecommerce'
+  'Ecommerce',
+  'MERN'
 ];
 
 export const featuredProjects = [
@@ -50,26 +50,26 @@ export const featuredProjects = [
     id: 'the-property-guardian',
     number: '02',
     title: 'The Property Guardian',
-    categoryTag: 'Premium Property Care Experience',
+    categoryTag: 'High-Trust Property Concierge Experience',
     categories: ['Business Websites', 'React'],
     subtitle: 'High-Trust Property Concierge & Remote Asset Verification Platform',
-    summary: 'A premium web experience designed for property owners who need reliable property monitoring and care while away. Features an editorial UI with strong typography and business-oriented layout.',
+    summary: 'A premium responsive web experience designed for property owners who need reliable property monitoring and care while away. Features an editorial layout with strong typography, component-driven sections, and mobile-optimized interactions.',
     image: propertyGuardianImg,
     imageAlt: 'The Property Guardian High-Value Real Estate Care and Remote Inspection Interface',
     layoutStyle: 'architectural-editorial',
     theme: 'architectural',
     features: [
-      'Premium Frontend',
-      'Responsive Architecture',
-      'Editorial Typography',
-      'Business-Focused UX',
-      'NRI Property-Care Pathway',
-      'Audit Verification Tiers'
+      'Responsive UI Development',
+      'Editorial Layout Architecture',
+      'High-Trust Typography',
+      'Mobile Responsiveness',
+      'Service Tiers Component',
+      'Client Inquiry Pathway'
     ],
-    technologies: ['React', 'Modern CSS', 'JavaScript', 'Responsive Architecture'],
+    technologies: ['React.js', 'Modern CSS', 'JavaScript', 'Responsive UI'],
     details: {
       clientNeed: 'Non-resident Indian (NRI) property owners need trustworthy, real-time visibility into the security, upkeep, and physical status of their overseas residential investments.',
-      engineeringSolution: 'Developed an authoritative, conversion-driven editorial experience featuring service tiers, scheduled audit breakdowns, and an intuitive client contact pathway.'
+      engineeringSolution: 'Engineered the complete responsive frontend experience in React.js, implementing custom editorial layout grids, high-fidelity responsive typography, interactive service tiers, and optimized cross-device performance.'
     },
     liveUrl: 'https://the-property-guardian.netlify.app/',
     codeUrl: 'https://github.com/mathan2424-png',
@@ -78,28 +78,28 @@ export const featuredProjects = [
   {
     id: 'networth-admin',
     number: '03',
-    title: 'Networth Admin',
-    categoryTag: 'Business Administration Platform',
-    categories: ['Admin Platforms', 'MERN', 'React'],
-    subtitle: 'Enterprise Membership, Access Governance & Content Management Platform',
-    summary: 'A robust business administration console engineered to oversee member databases, delegated roles, membership tiers, publications, and enterprise events.',
+    title: 'Network Qube Admin',
+    categoryTag: 'Enterprise Admin Interface / Frontend',
+    categories: ['Admin Platforms', 'React'],
+    subtitle: 'Business Administration Console & Responsive Governance Dashboard',
+    summary: 'A comprehensive administration dashboard frontend engineered with modular React components, structured role-matrix tables, intuitive member navigation, and cross-device responsiveness.',
     image: networthImg,
-    imageAlt: 'Networth Admin Control Panel with Role Management and Security Audit Logs',
+    imageAlt: 'Network Qube Admin Control Panel with Role Management and Responsive Directory Layout',
     layoutStyle: 'admin-console',
     theme: 'dark-accent',
     features: [
-      'Authentication',
-      'Member Directory',
-      'Admin Hierarchy',
-      'Role Matrix (RBAC)',
-      'Plans & Subscriptions',
-      'Events & Announcements',
-      'Security Audit Logs'
+      'Responsive UI Development',
+      'Member Directory Layout',
+      'Admin Hierarchy View',
+      'Role-Matrix Interface (RBAC)',
+      'Plans & Subscriptions UI',
+      'Events Dashboard View',
+      'Mobile Responsive Layout'
     ],
-    technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
+    technologies: ['React.js', 'JavaScript', 'CSS3', 'Responsive UI', 'Component Architecture'],
     details: {
-      clientNeed: 'Organizations managing multi-tier communities require consolidated control over permission policies, event announcements, and dynamic member roster directories without data fragmentation.',
-      engineeringSolution: 'Engineered an administrative dashboard with fine-grained RBAC matrix, protected API endpoints, responsive CRUD panels, and audit log interfaces.'
+      clientNeed: 'Organizations managing multi-tier member networks required a centralized, clean web interface for managing user directories, membership tiers, and administrative controls.',
+      engineeringSolution: 'Engineered the complete frontend interface in React.js, developing reusable component hierarchies, accessible data tables, clean state workflows, and fluid mobile responsiveness.'
     },
     liveUrl: '#',
     codeUrl: 'https://github.com/MathanKumarMP/Networth-Admin',
@@ -109,26 +109,26 @@ export const featuredProjects = [
     id: 'tiny-theatre',
     number: '04',
     title: 'The Tiny Theatre',
-    categoryTag: 'Entertainment & Ticketing Admin',
-    categories: ['Admin Platforms', 'React', 'MERN'],
-    subtitle: 'Interactive Entertainment & Showtime Booking Administration Console',
-    summary: 'A dedicated administrative management portal engineered for movie schedules, real-time seat reservation matrices, ticket verification, and daily revenue tracking.',
+    categoryTag: 'Entertainment & Ticketing Admin / Frontend',
+    categories: ['Admin Platforms', 'React'],
+    subtitle: 'Interactive Showtime Management & Seat Reservation Console',
+    summary: 'A custom administrative frontend interface engineered for boutique cinema operations, featuring an interactive seat reservation matrix, dynamic showtime management layouts, and responsive ticket verification workflows.',
     image: tinyTheatreImg,
-    imageAlt: 'The Tiny Theatre Admin Console with Showtime Management and Seat Matrix',
+    imageAlt: 'The Tiny Theatre Admin Console with Showtime Management and Interactive Seat Matrix',
     layoutStyle: 'admin-console',
     theme: 'dark-accent',
     features: [
-      'Showtime Curation',
-      'Seat Selection Matrix',
-      'Ticket Booking Queue',
-      'Daily Revenue Metrics',
-      'Role-Based Admin Access',
-      'Report Generation'
+      'Responsive UI Development',
+      'Interactive Seat Matrix',
+      'Showtime Schedule Layout',
+      'Ticket Verification UI',
+      'Daily Revenue Metrics View',
+      'Mobile-Friendly Interactions'
     ],
-    technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
+    technologies: ['React.js', 'JavaScript', 'CSS3', 'Responsive UI', 'Interactive UI State'],
     details: {
-      clientNeed: 'Independent theatres require a streamlined console to configure auditorium seating maps, track ticket allocations, and audit showtime box office earnings in real-time.',
-      engineeringSolution: 'Built a responsive admin interface with seat grid state rendering, booking status pipelines, and secure API endpoints for showtime curation.'
+      clientNeed: 'Independent boutique theatres needed an intuitive, visual administrative console to configure seat matrices, update movie showtimes, and verify admissions across mobile and desktop devices.',
+      engineeringSolution: 'Developed the complete frontend application with React.js, creating interactive SVG/grid seat selection components, dynamic schedule displays, and a fluid responsive layout tailored for box office managers.'
     },
     liveUrl: '#',
     codeUrl: 'https://github.com/MathanKumarMP/TINY-Admin',
@@ -167,10 +167,10 @@ export const featuredProjects = [
     id: 'pricouture',
     number: '06',
     title: 'PRI COUTURE',
-    categoryTag: 'Premium Boutique Ecommerce',
+    categoryTag: 'Premium Boutique Ecommerce / Frontend',
     categories: ['Ecommerce', 'React'],
-    subtitle: 'Editorial Luxury Boutique Storefront & Catalog Management Flow',
-    summary: 'A product-focused ecommerce interface delivering an editorial luxury aesthetic. Combines responsive React UI with an API-ready architecture and dynamic catalog administration.',
+    subtitle: 'Editorial Luxury Boutique Storefront & Catalog Lookbook',
+    summary: 'A product-focused ecommerce storefront delivering an editorial luxury aesthetic. Combines responsive React components with fluid lookbook galleries, interactive cart drawer state, and mobile-friendly shopping flows.',
     image: pricoutureImg,
     imageAlt: 'PRI COUTURE Luxury Fashion Boutique Editorial Storefront and Lookbook',
     layoutStyle: 'luxury-ecommerce',
@@ -178,15 +178,15 @@ export const featuredProjects = [
     features: [
       'React & Vite Tooling',
       'Responsive Lookbook UI',
-      'Product-Focused Grid',
-      'Cart Drawer State',
-      'Catalog Schema Design',
-      'Admin + Store Architecture'
+      'Product Grid Layouts',
+      'Interactive Cart Drawer State',
+      'Mobile Shopping UX',
+      'Component Architecture'
     ],
-    technologies: ['React', 'Vite', 'JavaScript', 'CSS3', 'REST API Architecture'],
+    technologies: ['React.js', 'Vite', 'JavaScript', 'CSS3', 'Responsive UI'],
     details: {
-      clientNeed: 'High-end fashion boutiques demand an editorial lookbook storefront with smooth responsive interactions that elevate brand distinction beyond cookie-cutter ecommerce templates.',
-      engineeringSolution: 'Built a modular React frontend leveraging Vite for lightning-fast loads, fluid image grids, interactive cart drawer state, and an intuitive product catalog schema.'
+      clientNeed: 'High-end fashion boutiques demand an editorial lookbook storefront with smooth responsive interactions that elevate brand distinction beyond standard ecommerce templates.',
+      engineeringSolution: 'Built a modular React frontend leveraging Vite for lightning-fast loads, fluid image grids, interactive cart drawer state, and responsive catalog layouts.'
     },
     liveUrl: '#',
     codeUrl: 'https://github.com/mathan2424-png',
@@ -196,53 +196,80 @@ export const featuredProjects = [
 
 export const additionalProjects = [
   {
-    id: 'antb',
+    id: 'cni-business-forum',
     number: '07',
+    title: 'CNI Business Forum',
+    type: 'Business Networking & Membership Platform',
+    category: 'Business Websites',
+    role: 'Frontend Development',
+    technologies: ['React.js', 'JavaScript', 'CSS3', 'Responsive UI'],
+    description: 'Frontend development for an enterprise business networking forum. Engineered responsive website layouts, interactive event schedules, member directories, and mobile-first navigation.',
+    link: '#'
+  },
+  {
+    id: 'you-leggings',
+    number: '08',
+    title: 'You Leggings',
+    type: 'Commercial Apparel Ecommerce Storefront',
+    category: 'Ecommerce',
+    role: 'Frontend Development',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI'],
+    description: 'Frontend website development for a commercial apparel brand. Designed and developed product showcase grids, promotional banners, fluid mobile layouts, and frictionless user interactions.',
+    link: '#'
+  },
+  {
+    id: 'antb',
+    number: '09',
     title: 'ANTB',
     type: 'Corporate Business Web Platform',
     category: 'Business Websites',
-    technologies: ['React', 'CSS3', 'JavaScript'],
-    description: 'Clean corporate web presence engineered for brand credibility, service clarity, and cross-platform responsiveness.',
+    role: 'Frontend Development',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+    description: 'Frontend development of a corporate website engineered for brand credibility, clean multi-column layouts, responsive typography, and cross-platform mobile fidelity.',
     link: '#'
   },
   {
     id: 'india-dairy-show',
-    number: '08',
+    number: '10',
     title: 'India Dairy Show',
     type: 'Exhibition & Event Portal',
     category: 'Business Websites',
-    technologies: ['React', 'JavaScript', 'Responsive Design'],
-    description: 'Dynamic industry exhibition portal highlighting schedules, exhibitor registrations, and multi-day conference agendas.',
+    role: 'Frontend Development',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI'],
+    description: 'Frontend implementation for an industry exhibition portal, delivering responsive multi-day event schedules, speaker profile components, and mobile-optimized exhibitor directories.',
     link: '#'
   },
   {
     id: 'proultima',
-    number: '09',
+    number: '11',
     title: 'Proultima Engineering',
     type: 'Industrial & Engineering Solutions',
     category: 'Business Websites',
-    technologies: ['React', 'CSS3', 'Modular Architecture'],
-    description: 'High-precision engineering website communicating industrial services, technical specifications, and quote request workflows.',
+    role: 'Frontend Development',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Layouts'],
+    description: 'Frontend website development communicating engineering solutions, technical specification tables, and responsive inquiry forms with high-precision layout styling.',
     link: '#'
   },
   {
     id: 'shrikrish-housing',
-    number: '10',
+    number: '12',
     title: 'Shrikrish Housing',
     type: 'Real Estate & Property Platform',
     category: 'Business Websites',
-    technologies: ['React', 'JavaScript', 'Property UI'],
-    description: 'Modern residential showcase featuring layout previews, floor configurations, and direct buyer inquiry routing.',
+    role: 'Frontend Development',
+    technologies: ['React.js', 'JavaScript', 'CSS3', 'Responsive UI'],
+    description: 'Frontend property showcase featuring interactive floor plan layouts, photo galleries, responsive property cards, and seamless mobile inquiry routing.',
     link: '#'
   },
   {
     id: 'zirve-krishna',
-    number: '11',
+    number: '13',
     title: 'Zirve / Krishna Group',
     type: 'Enterprise Corporate Presence',
     category: 'Business Websites',
-    technologies: ['React', 'CSS Grid', 'REST Integration'],
-    description: 'Scalable corporate web identity uniting multi-sector business divisions with consistent navigation and executive messaging.',
+    role: 'Frontend Development',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Grid'],
+    description: 'Frontend website development uniting diverse corporate divisions with unified brand navigation, responsive grid layouts, and smooth cross-browser compatibility.',
     link: '#'
   }
 ];

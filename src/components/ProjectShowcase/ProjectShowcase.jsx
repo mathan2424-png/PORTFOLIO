@@ -151,16 +151,20 @@ export default function ProjectShowcase({ project, index }) {
                 <span className="browser-lock-icon">🔒</span>
                 <span className="browser-address-text">
                   {id === 'serviq' && 'https://app.serviq.io/admin/restaurants'}
-                  {id === 'networth-admin' && 'https://admin.nexusflow.io/access-control'}
-                  {id === 'pricouture' && 'https://pricouture.com/collections/autumn-atelier'}
                   {id === 'the-property-guardian' && 'https://the-property-guardian.netlify.app'}
+                  {id === 'networth-admin' && 'https://admin.networkqube.com/dashboard'}
+                  {id === 'tiny-theatre' && 'https://admin.thetinytheatre.com/console'}
+                  {id === 'hr-portal' && 'https://hrms.enterprise.internal/directory'}
+                  {id === 'pricouture' && 'https://pricouture.com/collections/autumn-atelier'}
                 </span>
               </div>
               <div className="browser-status-chip">
                 {id === 'serviq' && <span className="status-live-pill">LIVE SAAS</span>}
-                {id === 'networth-admin' && <span className="status-live-pill status-rbac">RBAC CONSOLE</span>}
-                {id === 'pricouture' && <span className="status-live-pill status-boutique">BOUTIQUE STORE</span>}
                 {id === 'the-property-guardian' && <span className="status-live-pill status-deployed">DEPLOYED</span>}
+                {id === 'networth-admin' && <span className="status-live-pill status-rbac">ADMIN CONSOLE</span>}
+                {id === 'tiny-theatre' && <span className="status-live-pill status-rbac">SEAT MATRIX UI</span>}
+                {id === 'hr-portal' && <span className="status-live-pill">HRMS PORTAL</span>}
+                {id === 'pricouture' && <span className="status-live-pill status-boutique">BOUTIQUE STORE</span>}
               </div>
             </div>
 
@@ -179,9 +183,11 @@ export default function ProjectShowcase({ project, index }) {
                 <span className="pulse-ping" />
                 <span className="badge-text">
                   {id === 'serviq' && 'Multi-Tenant Architecture'}
-                  {id === 'networth-admin' && 'Role-Based Access Control'}
-                  {id === 'pricouture' && 'Responsive React Catalog'}
-                  {id === 'the-property-guardian' && 'High-Trust NRI Verification'}
+                  {id === 'the-property-guardian' && 'Responsive Editorial UI'}
+                  {id === 'networth-admin' && 'Responsive Admin UI'}
+                  {id === 'tiny-theatre' && 'Interactive Seating Matrix'}
+                  {id === 'hr-portal' && 'Enterprise Dashboard'}
+                  {id === 'pricouture' && 'Responsive React Lookbook'}
                 </span>
               </div>
             </div>

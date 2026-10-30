@@ -1,104 +1,569 @@
-.skills-section {
+/* ==========================================================================
+   MY ENGINEERING STACK - REFERENCE-ACCURATE CARDS UI
+   Visual Style: Clean Luxury Frosted White Cards, Ice-Blue & Navy Accents,
+                 Horizontal Tech Shelf with Authentic Brand Logos, Insight Banners
+   ========================================================================== */
+
+.stack-section {
+  position: relative;
+  overflow: visible;
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.stack-container {
+  max-width: min(1360px, 94vw);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Header */
+.stack-header-block {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stack-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.32rem 0.95rem;
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  border-radius: var(--radius-pill, 999px);
+  margin-bottom: 1.25rem;
+}
+
+.stack-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent, #2563EB);
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+}
+
+.stack-eyebrow-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: #1D4ED8;
+  text-transform: uppercase;
+}
+
+.stack-heading {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--text-primary, #0F172A);
+  margin: 0 0 1.25rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stack-heading-accent {
+  color: var(--accent, #2563EB);
+  display: inline-block;
   position: relative;
 }
 
-.skills-glass-card {
-  position: relative;
+.stack-subline {
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--text-secondary, #475569);
+  margin: 0;
+  text-align: center;
+  max-width: 820px;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* ==========================================================================
+   CARDS WRAPPER & ROWS
+   Top Row: 2 Cards (Frontend, Backend)
+   Bottom Row: 3 Cards (Database, Programming, Tools)
+   ========================================================================== */
+.stack-cards-wrapper {
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 3rem;
 }
 
-/* Horizontal Technology Strip */
-.tech-strip-wrapper {
-  background: linear-gradient(135deg, rgb(255 255 255 / 19%) 0%, rgb(245 248 255 / 45%) 100%);
-  backdrop-filter: blur(12px) saturate(200%);
-  -webkit-backdrop-filter: blur(12px) saturate(200%);
-  border: 1.5px solid rgb(6 6 6 / 20%);
-  border-radius: var(--radius-card);
-  padding: 1.5rem 1.75rem;
-  box-shadow: inset 0 1.5px 2px 0 rgba(255, 255, 255, 1), 0 12px 30px -8px rgba(15, 23, 42, 0.06);
+.stack-cards-row {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.stack-cards-row-top {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stack-cards-row-bottom {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Master Category Card */
+.stack-cat-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 26px;
+  padding: clamp(1.5rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow:
+    0 14px 34px -10px rgba(20, 30, 60, 0.05),
+    0 0 0 1px rgba(226, 232, 240, 0.6),
+    inset 0 1.5px 2px #FFFFFF;
+  transition: transform var(--transition-fast, 0.2s ease),
+              border-color var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
+}
+
+.stack-cat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(147, 197, 253, 0.95);
+  box-shadow:
+    0 20px 45px -10px rgba(37, 99, 235, 0.1),
+    0 0 0 1px rgba(147, 197, 253, 0.6),
+    inset 0 1.5px 2px #FFFFFF;
+}
+
+/* Card Header */
+.stack-cat-header {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+  gap: 0.75rem;
 }
 
-.tech-strip-header {
+.stack-cat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* Colored Icon Square Box */
+.stack-cat-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.stack-cat-icon-box.box-blue {
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  color: #2563EB;
+}
+
+.stack-cat-icon-box.box-green {
+  background: #F0FDF4;
+  border: 1px solid #DCFCE7;
+  color: #16A34A;
+}
+
+.stack-cat-icon-box.box-cyan {
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  color: #0284C7;
+}
+
+.stack-cat-icon-box.box-indigo {
+  background: #EEF2FF;
+  border: 1px solid #E0E7FF;
+  color: #4F46E5;
+}
+
+.stack-cat-icon-box.box-purple {
+  background: #FAF5FF;
+  border: 1px solid #F3E8FF;
+  color: #9333EA;
+}
+
+.stack-cat-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-cat-title {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-primary, #0F172A);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.stack-cat-subtitle {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.8rem;
+  color: var(--text-secondary, #64748B);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+/* "View details ->" Action Button */
+.stack-cat-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2563EB;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  outline: none;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.stack-cat-action-btn:hover,
+.stack-cat-action-btn:focus-visible {
+  background: #EFF6FF;
+  color: #1D4ED8;
+}
+
+.action-arrow {
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.stack-cat-action-btn:hover .action-arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   TECHNOLOGY ICONS SHELF (Horizontally Aligned Mini Cards)
+   ========================================================================== */
+.stack-tech-shelf {
+  background: rgba(248, 250, 252, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 18px;
+  padding: 1.1rem 1rem;
+  margin-bottom: 1.15rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.stack-tech-items-grid {
+  width: 100%;
+}
+
+/* Specific Shelf Grid Layouts matching reference */
+.stack-tech-items-grid.grid-frontend {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.65rem;
+}
+
+.stack-tech-items-grid.grid-backend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.stack-tech-items-grid.grid-database {
+  display: flex;
+  justify-content: center;
+}
+
+.stack-tech-items-grid.grid-database .tech-mini-card {
+  max-width: 160px;
+  width: 100%;
+}
+
+.stack-tech-items-grid.grid-programming {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.stack-tech-items-grid.grid-tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+/* Center the last two tool cards (Postman & Vercel) neatly */
+.stack-tech-items-grid.grid-tools .tech-mini-card:nth-child(4) {
+  grid-column: 1 / span 1;
+}
+
+.stack-tech-items-grid.grid-tools .tech-mini-card:nth-child(5) {
+  grid-column: 2 / span 1;
+}
+
+/* Mini Tech Card Component */
+.tech-mini-card {
+  background: #FFFFFF;
+  border: 1.2px solid rgba(226, 232, 240, 0.9);
+  border-radius: 14px;
+  padding: 0.85rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(20, 30, 60, 0.03);
+  transition: transform var(--transition-fast, 0.2s ease),
+              border-color var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
+  cursor: default;
+  outline: none;
+}
+
+.tech-mini-card:hover,
+.tech-mini-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(147, 197, 253, 0.95);
+  box-shadow: 0 8px 18px -4px rgba(37, 99, 235, 0.12);
+}
+
+.tech-mini-icon-wrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.tech-mini-card:hover .tech-mini-icon-wrap {
+  transform: scale(1.08);
+}
+
+.tech-mini-name {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1E293B;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   EXPANDABLE TECHNICAL IMPLEMENTATION DRAWER
+   ========================================================================== */
+.stack-details-drawer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.25s ease,
+              margin-bottom 0.25s ease;
+}
+
+.stack-details-drawer.is-open {
+  max-height: 300px;
+  opacity: 1;
+  margin-bottom: 1.15rem;
+}
+
+.stack-details-inner {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 14px;
+  padding: 1rem 1.15rem;
+  box-shadow: 0 4px 12px rgba(20, 30, 60, 0.03);
+}
+
+.details-drawer-heading {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent, #2563EB);
+  letter-spacing: 0.08em;
+  margin: 0 0 0.65rem 0;
+}
+
+.details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+}
+
+.details-list-item {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #475569;
+}
+
+.details-tech-name {
+  color: #0F172A;
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+/* ==========================================================================
+   BOTTOM INSIGHT CALLOUT BANNER
+   ========================================================================== */
+.stack-cat-insight {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  margin-top: auto;
+}
+
+.insight-icon {
   flex-shrink: 0;
 }
 
-.tech-strip-title {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+.insight-text {
+  font-weight: 500;
 }
 
-.tech-strip-pills {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  flex: 1;
+/* Theme variations for Insight callout */
+.insight-blue {
+  background: #F0F7FF;
+  border: 1px solid #DBEAFE;
+  color: #1E40AF;
 }
 
-.tech-strip-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.14);
-  padding: 0.4rem 0.85rem;
-  border-radius: var(--radius-pill);
-  box-shadow: inset 0 1px 1px #FFFFFF, 0 2px 6px rgba(0, 0, 0, 0.04);
-  transition: all var(--transition-fast);
+.insight-blue .insight-icon {
+  color: #2563EB;
 }
 
-.tech-strip-chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+.insight-green {
+  background: #F0FDF4;
+  border: 1px solid #DCFCE7;
+  color: #166534;
 }
 
-.tech-chip-symbol {
-  font-size: 0.5rem;
-  color: var(--accent);
+.insight-green .insight-icon {
+  color: #16A34A;
 }
 
-.tech-chip-name {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-primary);
+.insight-cyan {
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  color: #0369A1;
 }
 
-@media (max-width: 1200px) {
-  .skills-grid {
+.insight-cyan .insight-icon {
+  color: #0284C7;
+}
+
+.insight-indigo {
+  background: #EEF2FF;
+  border: 1px solid #E0E7FF;
+  color: #3730A3;
+}
+
+.insight-indigo .insight-icon {
+  color: #4F46E5;
+}
+
+.insight-purple {
+  background: #FAF5FF;
+  border: 1px solid #F3E8FF;
+  color: #6B21A8;
+}
+
+.insight-purple .insight-icon {
+  color: #9333EA;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .stack-cards-row-top {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-cards-row-bottom {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-tools {
+    grid-column: span 2;
+  }
+
+  .stack-tech-items-grid.grid-tools {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .stack-tech-items-grid.grid-tools .tech-mini-card:nth-child(4),
+  .stack-tech-items-grid.grid-tools .tech-mini-card:nth-child(5) {
+    grid-column: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .tech-strip-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .stack-cards-row-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .card-tools {
+    grid-column: span 1;
+  }
+
+  .stack-tech-items-grid.grid-frontend {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stack-tech-items-grid.grid-tools {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 640px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+@media (max-width: 540px) {
+  .stack-cat-card {
+    padding: 1.35rem 1.15rem;
+    border-radius: 20px;
+  }
+
+  .stack-tech-shelf {
+    padding: 0.85rem 0.65rem;
+  }
+
+  .stack-tech-items-grid.grid-frontend {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stack-tech-items-grid.grid-backend,
+  .stack-tech-items-grid.grid-programming,
+  .stack-tech-items-grid.grid-tools {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stack-cat-insight {
+    font-size: 0.75rem;
+    padding: 0.65rem 0.85rem;
   }
 }

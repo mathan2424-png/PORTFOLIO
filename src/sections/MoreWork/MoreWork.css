@@ -188,6 +188,17 @@
   border-radius: var(--radius-full);
 }
 
+.row-role-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  background-color: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  color: #1D4ED8;
+  border-radius: var(--radius-pill, 999px);
+  font-weight: 600;
+}
+
 .row-link {
   display: inline-flex;
   align-items: center;
